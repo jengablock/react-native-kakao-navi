@@ -88,11 +88,7 @@ public class ARNKakaoNavi extends ReactContextBaseJavaModule {
         option.setVehicleType(getVehicleType(options.getInt("vehicleType")));
         option.setRpOption(getRpOption(options.getInt("rpOption")));
         option.setRouteInfo(options.getBoolean("routeInfo"));
-        option.setStartX(options.getDouble("startX"));
-        option.setStartY(options.getDouble("startY"));
         option.setStartAngle(options.getInt("startAngle"));
-        option.setUserId(options.getString("userId"));
-        option.setReturnUri(options.getString("returnUri"));
         List<Location> list = new ArrayList<Location>();
         for (int i = 0; i < viaList.size(); i++) {
             ReadableMap map = viaList.getMap(i);
@@ -122,11 +118,7 @@ public class ARNKakaoNavi extends ReactContextBaseJavaModule {
         option.setVehicleType(getVehicleType(options.getInt("vehicleType")));
         option.setRpOption(getRpOption(options.getInt("rpOption")));
         option.setRouteInfo(options.getBoolean("routeInfo"));
-        option.setStartX(options.getDouble("startX"));
-        option.setStartY(options.getDouble("startY"));
         option.setStartAngle(options.getInt("startAngle"));
-        option.setUserId(options.getString("userId"));
-        option.setReturnUri(options.getString("returnUri"));
         List<Location> list = new ArrayList<Location>();
         for (int i = 0; i < viaList.size(); i++) {
             ReadableMap map = viaList.getMap(i);
