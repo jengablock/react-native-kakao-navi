@@ -76,9 +76,8 @@ public class ARNKakaoNavi extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void share(final Location location, final ReadableMap options, final ReadableArray viaList, final Promise promise) {
-
-        Location destination = Location.newBuilder(location.getName(), location.getX(), location.getY()).build();
+    public void share(final ReadableMap location, final ReadableMap options, final ReadableArray viaList, final Promise promise) {
+        Location destination = Location.newBuilder(location.getString("name"), location.getDouble("x"), location.getDouble("y")).build();
 
         NaviOptions.Builder option = new NaviOptions.Builder();
 
@@ -112,9 +111,8 @@ public class ARNKakaoNavi extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void navigate(final Location location, final ReadableMap options, final ReadableArray viaList, final Promise promise) {
-
-        Location destination = Location.newBuilder(location.getName(), location.getX(), location.getY()).build();
+    public void navigate(final ReadableMap location, final ReadableMap options, final ReadableArray viaList, final Promise promise) {
+        Location destination = Location.newBuilder(location.getString("name"), location.getDouble("x"), location.getDouble("y")).build();
 
         NaviOptions.Builder option = new NaviOptions.Builder();
 
